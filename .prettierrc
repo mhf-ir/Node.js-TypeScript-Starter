@@ -1,0 +1,20 @@
+{
+  "semi": true,
+  "tabWidth": 2,
+  "proseWrap": "preserve",
+  "printWidth": 120,
+  "arrowParens": "always",
+  "trailingComma": "all",
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.mts"
+      ],
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
+}
