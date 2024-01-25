@@ -21,9 +21,5 @@
     "noImplicitAny": false,
     "noImplicitThis": false,
     "strictNullChecks": false,
-  },
-  "include": [
-    "src/**/*",
-    "test/**/*"
-  ],
+  }
 }

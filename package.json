@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "@types/node": "~20",
-    "@typescript-eslint/eslint-plugin": "~6",
-    "@typescript-eslint/parser": "~6",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
     "@vitest/coverage-v8": "^1",
     "eslint": "~8",
     "eslint-config-prettier": "~9",
@@ -20,18 +20,17 @@
     "vitest": "^1"
   },
   "scripts": {
-    "clean": "rimraf coverage build tmp coverage.js coverage.cjs",
+    "clean": "rimraf coverage build tmp",
     "lint": "eslint . --ext .ts --ext .mts",
     "prebuild": "npm run lint",
     "prettier": "prettier --config .prettierrc --write .",
-    "build": "tsc -p tsconfig.json",
+    "build": "npm run clean && tsc -p tsconfig.json",
     "build:watch": "tsc -w -p tsconfig.json",
-    "build:release": "npm run clean && tsc -p tsconfig.release.json",
-    "coverage": "tsc coverage.ts && mv coverage.js coverage.cjs && node coverage.cjs",
+    "coverage": "node coverage.mjs",
     "test:coverage": "vitest run --coverage && npm run coverage",
     "test:watch": "vitest",
     "test": "vitest run --coverage",
-    "ci": "npm run clean && npm run lint && npm run test:coverage && npm run build:release",
+    "ci": "npx --yes envinfo && npm run clean && npm run lint && npm run test:coverage && sleep 3 && npm run build",
     "start": "node --enable-source-maps build/src/main.js"
   },
   "author": "Mohammad Hossein Fattahizadeh <m@mhf.ir>",
