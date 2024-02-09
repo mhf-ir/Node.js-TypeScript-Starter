@@ -1,0 +1,7 @@
+ignores: [
+  "@vitest/coverage-v8",
+  "rimraf",
+  "ts-node",
+  "ts-api-utils",
+  "tslib",
+]
