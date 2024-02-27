@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "NodeNext",
-    "lib": [
-      "WebWorker",
-      "ESNext"
-    ],
+    "lib": ["WebWorker", "ESNext"],
     "moduleResolution": "NodeNext",
     "rootDir": ".",
     "outDir": "build",
@@ -20,6 +17,6 @@
     "noUnusedParameters": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "strictNullChecks": false,
+    "strictNullChecks": false
   }
 }

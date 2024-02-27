@@ -1,5 +1,6 @@
 ignores: [
   "@vitest/coverage-v8",
+  "nodemon",
   "rimraf",
   "ts-node",
   "ts-api-utils",

@@ -10,14 +10,8 @@
     "sourceType": "module",
     "ecmaVersion": "latest"
   },
-  "plugins": [
-    "@typescript-eslint"
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
+  "plugins": ["@typescript-eslint"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   "rules": {
     // The following rule is enabled only to supplement the inline suppression
     // examples, and because it is not a recommended rule, you should either
