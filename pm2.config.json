@@ -1,0 +1,13 @@
+[
+  {
+    "name": "http",
+    "script": "./build/src/app.js",
+    "watch": ["build"],
+    "autorestart": true,
+    "restart_delay": 1000,
+    "max_memory_restart": "512M",
+    "ignore_watch": ["node_modules", "coverage", ".git"],
+    "env": { "NODE_ENV": "production" },
+    "args": "http"
+  }
+]

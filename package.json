@@ -30,6 +30,7 @@
     "build": "npm run clean && tsc -p tsconfig.json",
     "watch:build": "tsc --watch -p tsconfig.json",
     "watch:run": "nodemon --config nodemon.json ./build/src/app.js",
+    "watch:pm2": "pm2-runtime start pm2.config.json",
     "coverage": "node --loader ts-node/esm .coverage.ts",
     "test:coverage": "vitest run --coverage && npm run coverage",
     "test:watch": "vitest",
@@ -42,6 +43,7 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^12.0.0",
+    "pm2": "^5.3.1",
     "tslib": "^2.6.2"
   }
 }
