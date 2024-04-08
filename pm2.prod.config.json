@@ -1,0 +1,18 @@
+[
+  {
+    "name": "http",
+    "script": "./build/src/app.js",
+    "autorestart": true,
+    "max_memory_restart": "512M",
+    "env": { "NODE_ENV": "production" },
+    "args": "http"
+  },
+  {
+    "name": "worker",
+    "script": "./build/src/app.js",
+    "autorestart": true,
+    "max_memory_restart": "512M",
+    "env": { "NODE_ENV": "production" },
+    "args": "worker"
+  }
+]
