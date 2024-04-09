@@ -12,3 +12,17 @@ In separate terminal run two watches:
 npm run watch:build
 npm run watch:run
 ```
+
+Using PM2:
+
+- development
+
+```
+npm run watch:pm2
+```
+
+- production
+
+```
+npm run start:pm2
+```
