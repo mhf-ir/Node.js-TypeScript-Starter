@@ -1,0 +1,28 @@
+[
+  {
+    "name": "http",
+    "script": "./build/src/app.js",
+    "interpreter_args": "--harmony",
+    "node_args": "--harmony",
+    "watch": ["build"],
+    "autorestart": true,
+    "restart_delay": 1000,
+    "max_memory_restart": "512M",
+    "ignore_watch": ["node_modules", "coverage", ".git"],
+    "env": { "NODE_ENV": "development" },
+    "args": "http"
+  },
+  {
+    "name": "worker",
+    "script": "./build/src/app.js",
+    "interpreter_args": "--harmony",
+    "node_args": "--harmony",
+    "watch": ["build"],
+    "autorestart": true,
+    "restart_delay": 1000,
+    "max_memory_restart": "512M",
+    "ignore_watch": ["node_modules", "coverage", ".git"],
+    "env": { "NODE_ENV": "development" },
+    "args": "worker"
+  }
+]

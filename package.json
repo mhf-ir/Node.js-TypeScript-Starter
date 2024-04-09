@@ -30,11 +30,13 @@
     "build": "npm run clean && tsc -p tsconfig.json",
     "watch:build": "tsc --watch -p tsconfig.json",
     "watch:run": "nodemon --config nodemon.json ./build/src/app.js",
+    "watch:pm2": "pm2-runtime start pm2.dev.config.json",
     "coverage": "node --loader ts-node/esm .coverage.ts",
     "test:coverage": "vitest run --coverage && npm run coverage",
     "test:watch": "vitest",
     "test": "vitest run --coverage",
     "start": "node --enable-source-maps build/src/app.js",
+    "start:pm2": "pm2-runtime start pm2.prod.config.json",
     "dev": "node --loader ts-node/esm src/app.ts",
     "ci": "npm run envinfo && npm run clean && npm run lint && npm run test:coverage && npm run build"
   },
@@ -42,6 +44,7 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^12.0.0",
+    "pm2": "^5.3.1",
     "tslib": "^2.6.2"
   }
 }
