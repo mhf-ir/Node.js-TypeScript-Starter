@@ -2,6 +2,8 @@
   {
     "name": "http",
     "script": "./build/src/app.js",
+    "interpreter_args": "--harmony",
+    "node_args": "--harmony",
     "autorestart": true,
     "max_memory_restart": "512M",
     "env": { "NODE_ENV": "production" },
@@ -10,6 +12,8 @@
   {
     "name": "worker",
     "script": "./build/src/app.js",
+    "interpreter_args": "--harmony",
+    "node_args": "--harmony",
     "autorestart": true,
     "max_memory_restart": "512M",
     "env": { "NODE_ENV": "production" },
